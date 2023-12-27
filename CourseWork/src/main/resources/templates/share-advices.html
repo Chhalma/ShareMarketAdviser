@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	    <title>Share Market Advice</title>
+    <style>
+        /* Some basic styling for the table */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th:nth-child(1), td:nth-child(1) {
+            /* Adjust the width of the first column (Share Name) */
+            width: 25%;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+            <link rel="stylesheet" th:href="@{/css/user-home.css}"/>
+</head>
+<body>
+	<div class="user-header">
+        <div class="logout-link">
+            <a th:href="@{logout}">Logout</a>
+        </div>
+    </div>
+    
+    <h1>Your Customized Share Advice</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Share Name</th>
+                <th>Advice</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr th:each="pair : ${shareMsgPairs}">
+              
+                <td th:text="${pair['share']}"></td>
+                <td th:text="${pair['msg']}"></td>
+            
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mini-share-market-advisor",
+  "private_key_id": "568ac2ff491ca319664fee359b35391796717252",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCsQu2CK2kdrXVB\nZyNa/lk4m8bu3ldLqOitVJWAdSRRXrwla/bJ2lZ5f+K5odJGsOAmsyOX2AD/hHRq\njIJDcNNQY+Olbrh6L/nOtNaUB31OettB/TsL1rySRW4j8suUDPzPrPZ9J6k5cDMX\nsydZ8JTOVCXgAYtb2rTWYSp0sksklXIRP2JinljS+xOa+lYnnpgkqh+NSkvytuIa\nPUpjxnxqjXCGIRNTAw4N98p4hev4TTmO1HjjCc36fX2E/BVnQzC46IjXtR/lag9t\nDTW0K1AmieiN7X6zvDgABD0OA15oVTqODRablOj7pv7MKGTp3KEz9eCAQcJOPFAf\n0xrC1cxPAgMBAAECggEAUxVAqoy3eTnlGPNeyQ9uBvCTRTh10CcaeicWqEtXhet0\nQXROJlMpbBZzSucynSfIJMI4A4+KA7Nl1tIILfDn6pkS/gJl9YDYMotkByeJl2WI\nBM7XQMGEV+Qm2C3NZI3TDXM1u216oBpuehrNewKfMtjBH8Z+6YGVwORCbuBjf7PO\nK1bjZCLzNECuESjtAFbU5z7lu511Al/ZE+5o+H7KUSJhhJ88ZgavAuemJD4sLIjJ\nyLdRsafry0yh4b5wqI194+8lrYJDhHNz1SzgtaWn5PZswOqEsX8mBhAT1SbzFeJe\nXdtILiyVLGzyK1mxSRw1HN9K5bj3hC3oAA0wyhzp0QKBgQDSideYhy/g32+K1lRQ\ncAY8RMP+ObZPCnsR8xiuZbs5pMOal+xfLn1G/lANd1gzVj4LDSK1g1WVHOcbTO+X\nRjoiVBPJwkix7rbJEEUyY51UhFR3ftfJllIs/aklNgW1Wtxe9BVB4ZjpCScxPofn\ne3z42xludqDR6K/we79z1qv7uQKBgQDRdTTjg7NpiJdU88rpatGA0DZ/D0csHgtW\nUF7wWAJYa/ceqLwomoQA7Gc4u7gpVRpx2n2UCR8C6JUWHCdDvFDE2AGLfwCG4vBn\nS7osOfKNKrr2n8t3rRMpSAnYYN+Fr5Gv7ANtqd6OqLFEPbcxvWhMIbhZqu/OBgSH\nPsPtW1DcRwKBgCKgr0gT/Aj1Vugz5jwwoKXq/X1jyptncuR54jZU3x1U/yL/F85z\n3AEANPRyC5yt85hnuay3BC15Sn2QAtwTnd4li/ekL8asJ34cYfUusyLCfQ4GW8F5\nKtzhf59yKjAw2Iv5g0GJtFenvL15tmqZQe3AQ4eKlVrQ9ZcNE2kfBrxpAoGAZmW9\nSGivQi2DhgV1Mm2FJEsmCTHH4pqBgl3iO+9ani2R7wwgiF0ZoXXw9HxZCOPQ/M4K\nzF81KO/ZSqjSzTt35POQtciN0mOJkYYk6tAdcsPsCPuPtd8H2gucvIqHW8y8FVv1\nRRxhcC6qEql1MLzfCzEE9dkqSPcKKbAWiqg0vKsCgYBBd4niUiVa1MeEaunYtWUs\nXGDyIky5l9Pp025hysWqjwDen4BCu4126kCFCiD/llholzb2+zv3N0ANeG0B7cOM\ndTf9KeePjvufrpswnWzM+7O1wTDLxjektiDVZn/JJxNZlmAWGbCBIf24gMuYlTMR\n+IEi0+pJ3hZ0Wf9gAKrS9Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "pubsubproducer@mini-share-market-advisor.iam.gserviceaccount.com",
+  "client_id": "105299146691076471668",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pubsubproducer%40mini-share-market-advisor.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

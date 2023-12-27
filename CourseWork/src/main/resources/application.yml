@@ -1,0 +1,20 @@
+  spring:
+    security:
+      oauth2:
+        client:
+          registration:
+            google:
+              clientId: 791044062022-975gn1dts41ijrst0voad7jjcue1te92.apps.googleusercontent.com
+              clientSecret : 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
+              redirectUri: http://localhost:8080/login/oauth2/code/google
+              ##clientId: 234968405455-fvqk1vkc7u5tibi2v66q3jttpdbmovj2.apps.googleusercontent.com
+              ##clientSecret : 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
+              
+              
+  server:
+    address: 127.0.0.1      
+    #port : 9191
+    port: 8080
+ 
+         
+            

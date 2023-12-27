@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <!-- Add any additional styling or scripts as needed -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Error</h1>
+
+        <p th:if="${#request.getAttribute('javax.servlet.error.status_code')} == 404">
+            Page Not Found (404)
+        </p>
+
+        <p th:unless="${#request.getAttribute('javax.servlet.error.status_code')} == 404">
+            An unexpected error occurred. Please try again later.
+        </p>
+
+        <!-- Add any additional HTML or Thymeleaf tags as needed -->
+    </div>
+
+</body>
+</html>

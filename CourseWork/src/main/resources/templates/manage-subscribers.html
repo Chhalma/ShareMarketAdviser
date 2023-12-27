@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Adviser</title>
+    <link rel="stylesheet" th:href="@{/css/adviser-home.css}"/>
+    <!-- Add your CSS links or stylesheets here -->
+</head>
+<body>
+
+    <header>
+        <h1>Manage Subscribers</h1>
+        <!-- Add any additional header information here -->
+    </header>
+
+    <nav>
+        <div >
+        <div >
+        	<a th:href="@{adviser-home}">Home</a>
+        	<a href="#view-subscribers">View Subscribers</a>
+        	<a href="#create-subscriber">Create Subscriber</a>
+        	<a href="#delete-subscriber">Delete Subscriber</a>
+            <a th:href="@{logout}">Logout</a>
+        </div>
+    </div>
+    </nav>
+
+  
+		 <section id="view-subscribers">
+        <h3>List of Subscribers</h3>
+        <ul>
+	        <li th:each="subscription : ${subscriptions}">
+	            <span th:text="${subscription.name}"></span>
+	            <!-- Replace "name" with the actual field you want to display -->
+	        </li>
+	    </ul>
+        </section>
+   <hr>
+        <section id = "create-subscriber">
+        <form action="/create-subscriber" method = post>
+        	<h2>Create New Subscribers</h2>
+        	<div><h3>Stock List</h3>
+	            	 <select name="topicName">
+			    		<option >Select</option>
+			        	<option th:each="topic : ${topics}" th:value="${topic.name}" th:text="${topic.name}"></option>
+			    	</select>
+	            </div>
+        	<br>
+        	<br>
+        	<input name="subscriberName" type = text size = 50>
+        	<br>
+        	<br>
+        	<button type=submit>Create Subscriber</button>
+        </form>
+    	</section>
+    	<hr>
+    	 <section id="delete-subscriber">
+        <h3>Delete Subscribers</h3>
+        <!-- Display featured stocks or stock recommendations here -->
+          <!--  Section -->
+       
+          
+               <form th:action="@{/delete-subscriber}" method="post">
+		            
+            <div>
+	            	 <select name="subscriberName">
+			    		<option >Select</option>
+			        	<option th:each="subscriptions : ${subscriptions}" th:value="${subscriptions.name}" th:text="${subscriptions.name}"></option>
+			    	</select>
+	            </div>
+	            <br>
+	            <br>
+	              <br>
+				<div>
+					 <button type="submit" >Delete</button>
+				</div>	
+		           
+		        </form>
+		 
+        </section>
+    	
+    	
+
+    <footer>
+        <!-- Add footer information or links here -->
+        <p>&copy; 2023 Stock Adviser</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+
+</body>
+</html>

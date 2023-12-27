@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishing Message</title>
+     <link rel="stylesheet" th:href="@{/css/adviser-home.css}"/>
+    
+</head>
+<body>
+<header>
+         <h1>Publish to Stock price</h1>
+        <!-- Add any additional header information here -->
+    </header>
+
+    <nav>
+        <div class="user-header">
+        <div class="logout-link">
+         	 <a th:href="@{adviser-home}">Home</a>
+         	 <a th:href="@{/publish-message}" th:action="@{/publish-message}">Publish Message</a>
+	    <a th:href="@{/manage-stock}" th:action="@{/manage-stock}">Manage Stock</a>
+	    
+            <a th:href="@{logout}">Logout</a>
+
+        </div>
+    </div>
+    </nav>
+
+
+    
+    <div th:if="${param.error}">
+        <p style="color: red;">Something went wrong in publishing message!! </p>
+    </div>
+      
+    <div th:if="${param.logout}">
+        <p style="color: green;">You have been logged out successfully.</p>
+    </div>
+    
+    <div th:if="${publishSuccess}">
+   		 <p style="color: green;">Message Sent successful! </p>
+	</div>
+    
+   
+<section>
+     
+            <div class="select">
+            
+            <form class = "publish-form" action="/publishMessage" method="post">
+            <h2>Select a Stock to send a message  !!</h2>
+	            <div>
+	            	 <select name="topicName">
+			    		<option >Select</option>
+			        	<option th:each="topic : ${topics}" th:value="${topic.name}" th:text="${topic.name}"></option>
+			    	</select>
+	            </div>
+	            <br>
+	            <br>
+	            
+			   <div>
+			   		 <!-- Add other form elements as needed -->
+			    	<textarea id="stockMsg" name="stockMsg" rows = 4 cols = 50 placeholder="Type stock update..." required></textarea>
+	            	
+			   </div>
+			   <br>
+				<div>
+				<button type="submit">Publish</button>
+				</div>			   
+			    </form>
+                  
+         
+              
+            </div>
+            
+      
+   
+</section>
+        
+      
+
+</body>
+</html>

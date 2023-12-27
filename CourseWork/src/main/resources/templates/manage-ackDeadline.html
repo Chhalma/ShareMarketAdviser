@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Default-ackDeadLine</title>
+    <link rel="stylesheet" th:href="@{/css/adviser-home.css}"/>
+    <!-- Add your CSS links or stylesheets here -->
+</head>
+<body>
+
+    <header>
+        <h1>Manage Default-ackDeadLine</h1>
+        <!-- Add any additional header information here -->
+    </header>
+
+    <nav>
+        <div >
+        <div >
+        	<a th:href="@{adviser-home}">Home</a>
+        	<a href="#view-default-ackDeadLine">View Default-ackDeadLine</a>
+        	<a href="#set-default-ackDeadLine">Set Default-ackDeadLine</a>
+        	<a th:href="@{logout}">Logout</a>
+        </div>
+    </div>
+    </nav>
+
+  
+		 <section id="view-default-ackDeadLine">
+       	 	 <h2>Default Ack Deadline</h2>
+
+  		  	<p>Default Ack Deadline value: <span th:text="${defaultAckDeadLine}"></span></p>
+        </section>
+  	 <hr>
+        <section id = "set-default-ackDeadLine">
+        <form action="/set-default-ackDeadLine" method = post>
+        	<h2>Set Default AckDeadLine</h2>
+        	<br><bt>
+        	<input name="newAckDeadLine" type = text size = 50>
+        	<br>
+        	<br>
+        	<button type=submit>Set AckDEadLine</button>
+        </form>
+    	</section>
+    	<hr>
+    	
+    	
+
+    <footer>
+        <!-- Add footer information or links here -->
+        <p>&copy; 2023 Stock Adviser</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+
+</body>
+</html>

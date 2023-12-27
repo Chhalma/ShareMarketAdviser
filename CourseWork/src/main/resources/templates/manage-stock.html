@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Adviser</title>
+    <link rel="stylesheet" th:href="@{/css/adviser-home.css}"/>
+    <!-- Add your CSS links or stylesheets here -->
+</head>
+<body>
+
+    <header>
+        <h1>Manage Stock Adviser</h1>
+        <!-- Add any additional header information here -->
+    </header>
+
+    <nav>
+        <div >
+        <div >
+        	<a th:href="@{adviser-home}">Home</a>
+        	<a href="#view-stock">View Stock</a>
+        	<a href="#create-stock">Create Stock</a>
+        	<a href="#delete-stock">Delete Stock</a>
+            <a th:href="@{logout}">Logout</a>
+        </div>
+    </div>
+    </nav>
+
+  
+		 <section id="view-stock">
+        <h3>Featured Stocks</h3>
+        <!-- Display featured stocks or stock recommendations here -->
+          <!--  Section -->
+       
+            
+           <ul>
+            <!-- Display publisher topics -->
+            <li th:each="topic : ${topics}">
+                <span th:text="${topic.name}"></span>
+            </li>
+        </ul>
+        </section>
+   <hr>
+        <section id = "create-stock">
+        <form action="/create-stock" method = post>
+        	<h3>Create New Stock</h3>
+        	<input name="topicName" type = text >
+        	<button type=submit>Create Stock</button>
+        </form>
+    	</section>
+    	<hr>
+    	 <section id="delete-stock">
+        <h3>Delete Stocks</h3>
+        <!-- Display featured stocks or stock recommendations here -->
+          <!--  Section -->
+       
+          
+               <form th:action="@{/delete-stock}" method="post">
+		            
+            <div><h3>Choose Stock to delete</h3>
+	            	 <select name="topicName">
+			    		<option >Select</option>
+			        	<option th:each="topic : ${topics}" th:value="${topic.name}" th:text="${topic.name}"></option>
+			    	</select>
+	            </div>
+	            <br>
+	            <br>
+	              <br>
+				<div>
+					 <button type="submit" >Delete</button>
+				</div>	
+		           
+		        </form>
+		 
+        </section>
+    	
+    	
+
+    <footer>
+        <!-- Add footer information or links here -->
+        <p>&copy; 2023 Stock Adviser</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+
+</body>
+</html>

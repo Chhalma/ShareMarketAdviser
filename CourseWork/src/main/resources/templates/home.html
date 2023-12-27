@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stock Advisor</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a th:href="@{adviser-login}">Advisor Login</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>My Stock Advisor</h1>
+            <p>Your Trusted Stock Analysis Platform</p>
+            <!--<a href="#signup" class="btn">Get Started</a>-->
+            <a href="/oauth2/authorization/google" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Features Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <!-- Service Cards -->
+                <div class="service-card">
+                    <h3>Stock Advises</h3>
+                    <p>Navigate the markets with precision.<br>
+                        Our Stock Market Advisor serves as your compass for making informed investment decisions.<br>
+                        Get personalized stock advice tailored to your selected shares.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Stock Advisor, your premier platform for dependable stock insights. Our expert team offers comprehensive analysis to empower your informed investment decisions.
+
+                Subscribe to your preferred shares, and we'll keep you updated with precise market analyses tailored to your interests.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us at <a href="mailto:contact@stockadvisor.com">contact@stockadvisor.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2023 Stock Advisor. All rights reserved.</p>
+            <p>Connect with us: <a href="#social">Facebook</a> | <a href="#social">Twitter</a> | <a href="#social">LinkedIn</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

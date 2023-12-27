@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Stock Advisor</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		
+		h2 {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		div {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body style="background-color : powderblue;">
+	<!--<h1>Stock Advisor  <span th:text="${name}"></span></h1>-->
+	<h1>Welcome to Stock Advisor</h1>
+	<hr>
+	<br />
+	<br />
+	<br>
+	<h2> "Navigate the markets with precision.<br>
+		 Our Stock Market Advisor is your compass to informed investment
+		decisions."</h2>
+		<br />
+		<br />
+	<div>
+		<h4>For expert stock advice, simply log in using your 
+			<a href="/oauth2/authorization/google">Google account</a>
+		</h4>
+		
+		<br />
+	</div>
+	<div>
+		<h4>If you're an Advisor, access your account
+			<a th:href="@{advisor-login}">here.</a>
+		</h4>
+
+	</div>
+</body>
+
+</html>

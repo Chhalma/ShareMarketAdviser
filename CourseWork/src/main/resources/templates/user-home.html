@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
+        <link rel="stylesheet" th:href="@{/css/user-home.css}"/>
+         <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+
+</head>
+<body>
+	<div class="user-header">
+        <div class="logout-link">
+            <a th:href="@{logout}">Logout</a>
+        </div>
+    </div>
+    
+<form id="sharesForm" action="/submitShares" method="post">
+
+    <div class="container">
+        <h1>Welcome, <span th:text="${name}">User</span>!</h1>
+        <p> Please select a maximum of 5 shares to proceed. </p>
+         <div class="searchable-multiselect">
+            <input type="text" class="search-input" placeholder="Search...">
+            <div class="multiselect-options">
+                <!-- Iterate over the options from the controller -->
+                <label th:each="option : ${shareOptions}">
+                    <input type="checkbox" th:name="share" th:value="${option.name}" th:text="${option.name}" />
+                </label>
+            </div>
+        </div>
+		<div class="selected-options">
+			<p>Selected shares:</p>
+			<ul id="selectedChoices"></ul>
+		</div> 
+		<button type="submit" class="btn">Submit</button>
+    </div>
+        <script src="js/custom.js"></script>
+    </div>
+</form>
+  
+
+</body>
+</html>

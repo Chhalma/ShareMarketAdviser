@@ -1,0 +1,54 @@
+/* Basic styling, adjust as needed */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.searchable-multiselect {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.search-input {
+	width: 95%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.multiselect-options label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Hide options by default and show based on search/filter */
+.multiselect-options label {
+	display: none;
+}
+
+.user-header {
+	display: flex;
+	justify-content: flex-end;
+	/* Align items to the right */
+	padding: 10px;
+	background-color: #f0f0f0;
+}
+
+.logout-link {
+	order: 2;
+}

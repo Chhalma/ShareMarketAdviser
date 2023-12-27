@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Adviser</title>
+    <link rel="stylesheet" th:href="@{/css/adviser-home.css}"/>
+    <!-- Add your CSS links or stylesheets here -->
+</head>
+<body>
+
+    <header>
+        <h1>Stock Adviser</h1>
+        <!-- Add any additional header information here -->
+    </header>
+
+    <nav>
+        <div class="user-header">
+        <div class="logout-link">
+         	 <a th:href="@{adviser-home}">Home</a>
+         	 <a th:href="@{/publish-message}" th:action="@{/publish-message}">Publish Message</a>
+	    	<a th:href="@{/manage-stock}" th:action="@{/manage-stock}">Manage Stock</a>
+	    	<a th:href="@{/manage-subscribers}" th:action="@{/manage-subscribers}">Manage Subscribers</a>
+	    	<a th:href="@{/manage-ackDeadline}" th:action="@{/manage-ackDeadline}">Manage DefaultAckDeadline</a>
+	    
+            <a th:href="@{logout}">Logout</a>
+
+        </div>
+    </div>
+    </nav>
+
+    <section id= "home">
+        <h2>Welcome to Stock Adviser</h2>
+        
+	        <!-- Add more content or features as needed -->
+    </section>
+
+   
+    	
+    	
+    <footer>
+        <!-- Add footer information or links here -->
+        <p>&copy; 2023 Stock Adviser</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+
+</body>
+</html>
